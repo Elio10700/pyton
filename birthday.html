@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Styled Output</title>
+  <style>
+    body {
+      background: #181825;
+      color: #fff;
+      font-family: 'Fira Mono', 'Consolas', monospace;
+      padding: 40px 10px;
+      min-height: 100vh;
+    }
+    .ascii-art {
+      color: #d16ba5;
+      font-weight: bold;
+      white-space: pre;
+      font-size: 1.1em;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      min-height: 8em;
+    }
+    .glitch {
+      font-size: 2em;
+      font-weight: bold;
+      color: #00eaff;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+      animation: glitch 1s infinite linear alternate-reverse;
+    }
+    @keyframes glitch {
+      0% { text-shadow: 2px 0 #ff00c8, -2px 0 #00eaff; }
+      20% { text-shadow: -2px 0 #ff00c8, 2px 0 #00eaff; }
+      40% { text-shadow: 2px 2px #ff00c8, -2px -2px #00eaff; }
+      60% { text-shadow: -2px 2px #ff00c8, 2px -2px #00eaff; }
+      80% { text-shadow: 2px 0 #ff00c8, -2px 0 #00eaff; }
+      100% { text-shadow: 0 0 #ff00c8, 0 0 #00eaff; }
+    }
+    .yellow {
+      color: #ffe066;
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+    .green {
+      color: #7fff7f;
+      font-weight: bold;
+    }
+    .table {
+      margin-top: 20px;
+      border-collapse: collapse;
+      width: 300px;
+      background: #232347;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px #0004;
+    }
+    .table th, .table td {
+      padding: 8px 16px;
+      text-align: left;
+    }
+    .table th {
+      background: #3b3b5c;
+      color: #7ecbff;
+      font-size: 1.1em;
+    }
+    .table td {
+      color: #fff;
+      border-bottom: 1px solid #2d2d44;
+    }
+    .table tr:last-child td {
+      border-bottom: none;
+    }
+    .inline {
+      color: #e17fff;
+      font-weight: bold;
+    }
+    .inline2 {
+      color: #7ecbff;
+      font-weight: bold;
+    }
+    .ending {
+      color: #ffe066;
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="ascii-art" id="ascii"></div>
+  <div class="glitch" id="glitch">Welcome!</div>
+  <div class="yellow">1000</div>
+  <div class="green">a = 100</div>
+  <table class="table">
+    <tr><th>Name</th><th>Age</th></tr>
+    <tr><td>Jack</td><td>15</td></tr>
+    <tr><td>John</td><td>18</td></tr>
+    <tr><td>James</td><td>13</td></tr>
+    <tr><td>Sam</td><td>14</td></tr>
+    <tr><td>Bill</td><td>15</td></tr>
+  </table>
+  <div style="margin-top:18px">
+    <span class="inline">This is the first line </span><span class="inline2">and it will be printed in the same line.</span>
+  </div>
+  <div class="ending">Have a SWEET day! 🍬🍭🍫</div>
+  <script>
+    // Typing effect for ASCII art
+    const ascii = `  ____            _       _           _   _           _ \n |  _ \\ ___  __ _(_) __ _| |__  _   _| |_(_) ___  ___| |\n | |_) / _ \\/ _\` | |/ _\` | '_ \\| | | | __| |/ _ \\/ __| |\n |  _ <  __/ (_| | | (_| | | | | |_| | |_| |  __/\\__ \_|\n |_| \\_\\___|\\__, |_|\\__,_|_| |_|\\__,_|\\__|_|\\___||___(_)\n            |___/                                       `;
+    let i = 0;
+    function typeAscii() {
+      if (i < ascii.length) {
+        document.getElementById('ascii').innerHTML += ascii[i] === '\n' ? '<br>' : ascii[i];
+        i++;
+        setTimeout(typeAscii, ascii[i-1] === '\n' ? 40 : 4);
+      }
+    }
+    typeAscii();
+    // Glitch effect (extra random color flicker)
+    const glitch = document.getElementById('glitch');
+    const colors = ['#00eaff', '#7ecbff', '#e17fff', '#d16ba5'];
+    let glitchInterval = setInterval(() => {
+      glitch.style.color = colors[Math.floor(Math.random()*colors.length)];
+      glitch.style.textShadow = `${Math.random()*4-2}px ${Math.random()*4-2}px #ff00c8, ${Math.random()*4-2}px ${Math.random()*4-2}px #00eaff`;
+    }, 60);
+    setTimeout(() => {
+      clearInterval(glitchInterval);
+      glitch.style.color = '#00eaff';
+      glitch.style.textShadow = '2px 0 #ff00c8, -2px 0 #00eaff';
+    }, 1200);
+  </script>
+</body>
+</html>
