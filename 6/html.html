@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You, Amazing Coding Teacher!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .code-card {
+            transition: all 0.3s ease;
+        }
+        .code-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <div id="vanta-bg" class="fixed inset-0 z-0 opacity-20"></div>
+    
+
+    <!-- Hero Section -->
+    <section class="relative z-10 hero-gradient py-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6 bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
+                    To Our Brilliant<br>
+                    Coding Mentor
+                </h1>
+                <p class="text-lg text-gray-700 mb-8 max-w-lg leading-relaxed">
+                    Your wisdom illuminates our path in the world of code. With grace and expertise, you transform complex concepts into beautiful understanding.
+                </p>
+                <div class="flex space-x-4">
+                    <button class="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl">
+                        <i data-feather="heart" class="inline mr-2"></i> Our Gratitude
+                    </button>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
+                <div class="relative">
+                    <img src="http://static.photos/education/640x360/42" alt="Teacher" class="rounded-2xl shadow-xl w-full max-w-md border-8 border-white transform rotate-1">
+                    <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
+                        <i data-feather="award" class="w-10 h-10 text-yellow-500"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appreciation Section -->
+    <section class="py-20 bg-gradient-to-b from-white to-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-4 bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">Your Magical Touch</h2>
+                <p class="text-gray-700 max-w-2xl mx-auto">Where others see complexity, you reveal elegant simplicity.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="code-card bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-gradient-to-br from-pink-100 to-pink-50 w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-inner">
+                        <i data-feather="compass" class="w-8 h-8 text-pink-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-pink-600">Wisdom Navigator</h3>
+                    <p class="text-gray-700">You chart the course through coding's vast seas with unerring precision and care.</p>
+                </div>
+                
+                <div class="code-card bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-gradient-to-br from-purple-100 to-purple-50 w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-inner">
+                        <i data-feather="sparkles" class="w-8 h-8 text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-purple-600">Concept Alchemist</h3>
+                    <p class="text-gray-700">You transmute abstract ideas into golden understanding with your magical explanations.</p>
+                </div>
+                
+                <div class="code-card bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-gradient-to-br from-indigo-100 to-indigo-50 w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-inner">
+                        <i data-feather="feather" class="w-8 h-8 text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-indigo-600">Gentle Mentor</h3>
+                    <p class="text-gray-700">Your guidance is as light as a feather yet leaves an indelible mark on our minds.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Special Message -->
+    <section class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-pink-50 to-purple-50"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl mx-auto text-center" data-aos="zoom-in">
+                <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-gray-100">
+                    <div class="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-feather="award" class="w-10 h-10 text-pink-500"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold mb-6 text-center bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">Our Guiding Light</h2>
+                    <p class="text-lg text-gray-700 mb-8 text-center max-w-2xl mx-auto leading-relaxed">
+                        In the binary world of ones and zeros, you bring the warmth of human connection. Your lessons are the constellations by which we navigate the vast universe of code.
+                    </p>
+                    <div class="flex justify-center">
+                        <img src="http://static.photos/education/320x240/5" alt="Teaching" class="rounded-full shadow-md w-48 h-48 object-cover border-4 border-white floating">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-b from-gray-800 to-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center mr-3 shadow-lg">
+                            <i data-feather="code" class="text-white w-5 h-5"></i>
+                        </div>
+                        <span class="text-xl font-bold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">Codingal</span>
+                    </div>
+                    <p class="mt-2 text-gray-400">Empowering the next generation of coders</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i data-feather="instagram" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i data-feather="twitter" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i data-feather="linkedin" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i data-feather="youtube" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>Made with <i data-feather="heart" class="w-4 h-4 text-pink-500 inline"></i> by your grateful students</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Vanta.js background
+        VANTA.GLOBE({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0xff6b8b,
+            backgroundColor: 0xf8fafc,
+            size: 0.80
+        });
+
+        // Initialize AOS animation
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Initialize feather icons
+        feather.replace();
+    </script>
+</body>
+</html>
