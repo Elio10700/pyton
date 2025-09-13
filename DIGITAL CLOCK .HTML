@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>digital clock</title>
+        <style>
+            body {
+                background-color: goldenrod;
+                text-align: center;
+                color: goldenrod;
+            }
+            #clock {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 250px;
+                height: 80px;
+                border: 10px solid white;
+                border-radius: 20px;
+                padding: 20px;
+                font-size: 32px;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                background: rgba(0,0,0,0.7);
+                color: goldenrod;
+                transform: translate(-50%, -50%);
+                box-shadow: 0 0 20px goldenrod;
+            }
+            #clock-emoji {
+                font-size: 40px;
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="clock">
+            <span id="clock-emoji">🕒</span>
+            <span id="clock-time">🕒</span>
+        </div>
+        <script>
+            function showTime() {
+                var dt = new Date();
+                var hr = dt.getHours();
+                var m = dt.getMinutes();
+                var s = dt.getSeconds();
+                var session = "AM";
+                if (hr == 0) {
+                    hr = 12;
+                }
+                if (hr > 12) {
+                    hr = hr - 12;
+                    session = "PM";
+                }
+                hr = hr < 9 ? "0" + hr : hr;
+                m = m < 10 ? "0" + m : m;
+                s = s < 10 ? "0" + s : s;
+                document.getElementById("clock-time").innerHTML = hr + ":" + m + ":" + s + " " + session;
+                setTimeout(showTime, 1000);
+            }
+            showTime();
+        </script>
+    </body>
+</html>
