@@ -1,0 +1,12 @@
+# check the frecuncy
+
+dic1 = {"codingal": 2, "union": 3, "hello": 2, "pen": 1, "mouse": 2}
+count = 0
+k = 2
+
+for value in dic1.values():
+    if value == k:
+        count += 1
+
+print(f"The count of words which has same frequency as {k} are {count}")
+ 
