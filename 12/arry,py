@@ -1,0 +1,12 @@
+# array  
+
+import array as arr
+
+a = arr. array("i"[12,34,56,89,90,89,,89])
+print(a)
+
+# count
+print("the count of 89 in the array ",a.count(89))
+# reverse 
+a. reverse
+print(a)
